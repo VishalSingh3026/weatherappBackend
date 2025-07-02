@@ -7,10 +7,10 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+
 app.use(cors({
   origin: "https://weather-app-ten-delta-93.vercel.app"
 }));
-
 
 app.get("/weather", async (req, res) => {
   const city = req.query.city;
