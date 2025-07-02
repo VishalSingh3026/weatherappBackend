@@ -9,8 +9,10 @@ const PORT = process.env.PORT || 5000;
 
 
 app.use(cors({
-  origin: "https://weather-app-ten-delta-93.vercel.app"
+  origin: true,
+  credentials: true
 }));
+
 
 app.get("/weather", async (req, res) => {
   const city = req.query.city;
